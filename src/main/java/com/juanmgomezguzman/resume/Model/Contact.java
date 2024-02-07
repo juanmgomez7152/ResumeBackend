@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String mynamE;
+    private String myname;
     private String myemail;
     private String myphone;
     private String mylocation;
@@ -19,10 +19,10 @@ public class Contact {
 
      // Getters and Setters
      public String getName(){
-        return mynamE;
+        return myname;
      }
      public void setName(String name){
-        this.mynamE=name;
+        this.myname=name;
      }
 
      public String getEmail(){
