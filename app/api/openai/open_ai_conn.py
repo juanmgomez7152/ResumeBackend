@@ -4,10 +4,12 @@ import tiktoken
 import asyncio
 from dotenv import load_dotenv
 
+
+load_dotenv()
 client = openai.OpenAI()
-model_name = "gpt-3.5-turbo"
+model_name = "gpt-4"
 system_message = "You are a helpful assistant"
-openai.api_key = os.getenv("OPENAI_API_KEY")
+client.api_key = os.getenv("OPENAI_API_KEY")
 
 async def openai_call(prompt):
     completion = client.Completion.create(
